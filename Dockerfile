@@ -9,6 +9,9 @@ ENV PATH $PATH:/opt/nodejs/bin
 
 WORKDIR "/opt"
 
+# Install curl
+RUN apt-get update -y && apt-get install -y curl
+
 # Download defined Node.js Version
 RUN curl -O https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz
 
