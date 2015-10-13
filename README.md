@@ -2,4 +2,4 @@
 
 # Node.js based on Ubuntu 15.10 (Wily Werewolf)
 - Node.js 4.2.0
-- npm 2.14.3
+- npm 2.14.7
