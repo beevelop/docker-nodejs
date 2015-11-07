@@ -1,24 +1,15 @@
-FROM ubuntu:wily
+FROM ubuntu-debootstrap:wily
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 # Build-Variables
 ENV NODEJS_VERSION 5.0.0
 
-# Set Environment Variables
-ENV PATH $PATH:/opt/nodejs/bin
+# Set PATH variable
+ENV PATH $PATH:/opt/node/bin
 
-WORKDIR "/opt"
+WORKDIR "/opt/node"
 
-RUN apt-get update -y && \
-    # Install curl
-    apt-get install -y curl && \
+RUN apt-get update && apt-get install -y curl ca-certificates --no-install-recommends && \
 
     # Download defined Node.js Version
-    curl -O https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz && \
-
-    # Extract and move to /opt
-    tar xf node-v${NODEJS_VERSION}-linux-x64.tar.gz && \
-    mv node-v${NODEJS_VERSION}-linux-x64 /opt/nodejs && \
-
-    # Clean up
-    rm node-v${NODEJS_VERSION}-linux-x64.tar.gz
+    curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1
