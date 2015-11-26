@@ -2,7 +2,7 @@ FROM ubuntu:wily
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 # Build-Variables
-ENV NODEJS_VERSION 0.12.7
+ENV NODEJS_VERSION 0.12.8
 
 # Set Environment Variables
 ENV PATH $PATH:/opt/nodejs/bin
