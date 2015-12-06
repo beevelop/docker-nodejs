@@ -3,7 +3,7 @@
 [![ImageLayer](https://badge.imagelayers.io/beevelop/nodejs:latest.svg)](https://imagelayers.io/?images=beevelop/nodejs:latest)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-# Node.js 5.1.0 (npm 3.3.6)
+# Latest Node.js and npm
 ### based on Ubuntu 15.10 (Wily Werewolf)
 ----
 ### Pull from Docker Hub
