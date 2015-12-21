@@ -1,4 +1,4 @@
-FROM ubuntu:wily
+FROM beevelop/base
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 # Build-Variables
