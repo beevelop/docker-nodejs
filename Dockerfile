@@ -2,7 +2,7 @@ FROM beevelop/base
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 # Build-Variables
-ENV NODEJS_VERSION 4.3.1
+ENV NODEJS_VERSION 4.3.2
 
 # Set Environment Variables
 ENV PATH $PATH:/opt/nodejs/bin
