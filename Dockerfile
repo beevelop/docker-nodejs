@@ -1,7 +1,7 @@
 FROM beevelop/base
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
-ENV NODEJS_VERSION=0.12.14 \
+ENV NODEJS_VERSION=0.12.15 \
     PATH=$PATH:/opt/nodejs/bin
 
 WORKDIR "/opt"
