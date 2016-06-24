@@ -2,7 +2,7 @@ FROM beevelop/base
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
 # Build-Variables
-ENV NODEJS_VERSION=0.10.45 \
+ENV NODEJS_VERSION=0.10.46 \
     PATH=$PATH:/opt/nodejs/bin
 
 WORKDIR "/opt"
