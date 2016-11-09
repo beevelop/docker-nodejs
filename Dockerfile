@@ -2,7 +2,7 @@ FROM beevelop/base
 
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
-ENV NODEJS_VERSION=7.0.0 \
+ENV NODEJS_VERSION=7.1.0 \
     PATH=$PATH:/opt/node/bin
 
 WORKDIR "/opt/node"
