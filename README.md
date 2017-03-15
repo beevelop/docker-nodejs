@@ -27,3 +27,6 @@ docker run -it beevelop/nodejs bash
 ```Dockerfile
 FROM beevelop/nodejs:latest
 ```
+
+----
+![One does not simply use latest](https://i.imgflip.com/1fgwxr.jpg)
