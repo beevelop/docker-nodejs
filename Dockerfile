@@ -1,6 +1,6 @@
 FROM beevelop/base
 
-ENV NODEJS_VERSION=11.4.0 \
+ENV NODEJS_VERSION=11.5.0 \
     PATH=$PATH:/opt/node/bin
 
 WORKDIR "/opt/node"
