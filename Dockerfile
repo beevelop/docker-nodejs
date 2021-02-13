@@ -1,11 +1,15 @@
 FROM beevelop/base
 
-ENV NODEJS_VERSION=10.16.3 \
-    PATH=$PATH:/opt/node/bin
-
-WORKDIR "/opt/node"
-
-RUN apt-get -qq update && apt-get -qq install -y curl ca-certificates --no-install-recommends && \
-    curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1 && \
-    rm -rf /var/lib/apt/lists/* && \
-    apt-get clean
+RUN apt-get update && apt-get install -y curl gnupg2 lsb-release && \
+    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
+    apt-key fingerprint 1655A0AB68576280 && \
+    export VERSION=node_14.x && \
+    export DISTRO="$(lsb_release -s -c)" && \
+    echo "deb https://deb.nodesource.com/$VERSION $DISTRO main" | tee /etc/apt/sources.list.d/nodesource.list && \
+    echo "deb-src https://deb.nodesource.com/$VERSION $DISTRO main" | tee -a /etc/apt/sources.list.d/nodesource.list && \
+    apt-get update && apt-get install -y nodejs && \
+    node -v && npm -v && \
+    npm install -g yarn && \
+    yarn -v && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
