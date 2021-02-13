@@ -5,7 +5,7 @@
 ![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-# Node.js 14 based on Ubuntu 20.04,
+# Node.js 14 based on Ubuntu 20.04.
 
 ---
 
