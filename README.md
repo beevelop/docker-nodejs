@@ -13,10 +13,10 @@
 ### Pull, build or run this image
 ```bash
 # pull the most recent tag / release
-docker pull beevelop/nodejs:v2021.06.1
+docker pull beevelop/nodejs:v2021.06.2
 
 # or run the image interactively
-docker run --rm --name beevelop -it beevelop/nodejs:v2021.06.1 bash
+docker run --rm --name beevelop -it beevelop/nodejs:v2021.06.2 bash
 
 # or build the image from GitHub
 docker build -t beevelop/nodejs github.com/beevelop/docker-nodejs
@@ -24,7 +24,7 @@ docker build -t beevelop/nodejs github.com/beevelop/docker-nodejs
 
 ### Or use as base image
 ```Dockerfile
-FROM beevelop/nodejs:v2021.06.1
+FROM beevelop/nodejs:v2021.06.2
 ```
 
 ---
